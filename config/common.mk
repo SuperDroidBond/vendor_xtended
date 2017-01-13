@@ -23,22 +23,16 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.alarm_alert=Bright_morning.ogg
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.android.wifi-watchlist=GoogleGuest \
-    ro.com.android.dateformat=MM-dd-yyyy \
-    ro.com.android.dataroaming=false \
+    ro.setupwizard.require_network=any \
+    ro.setupwizard.mode=OPTIONAL \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.opa.eligible_device=true\
-    persist.sys.wfd.nohdcp=1 \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
     ro.build.selinux=1 \
     persist.sys.dun.override=0 \
-    ro.com.google.ime.theme_id=5 \
     persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
-
+    persist.sys.wfd.virtual=0 \
+    persist.sys.wfd.nohdcp=1  
+    
 # whitelist packages for location providers not in system
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.services.whitelist.packagelist=com.google.android.gms
@@ -293,11 +287,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.xtended.buildtype=$(XTENDED_BUILD_TYPE) \
     ro.xtended.display.version=$(XTENDED_DISPLAY_VERSION) \
     com.xtended.fingerprint=$(ROM_FINGERPRINT)
-
-# Some props that we need for the google stuff we're adding
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.com.google.ime.height_ratio=1.05 \
-    ro.com.google.ime.emoji_key=false
 
 EXTENDED_POST_PROCESS_PROPS := vendor/xtended/tools/xtended_process_props.py
 
