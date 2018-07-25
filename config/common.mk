@@ -196,9 +196,6 @@ PRODUCT_PACKAGES += \
     libsepol \
     nano \
     htop \
-    gdbserver \
-    oprofiled \
-    sqlite3 \
     pigz \
     7z \
     lib7z \
