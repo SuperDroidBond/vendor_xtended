@@ -147,11 +147,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     adb_root
 
-# Include explicitly to work around GMS issues
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librsjni
-
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
