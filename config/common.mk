@@ -264,6 +264,14 @@ PRODUCT_PACKAGES += \
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/xtended/overlay/common
 
+# Do not include art debug targets
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
 # Versioning System
 # Xtended first version.
 PRODUCT_VERSION_MAJOR = 10.0
