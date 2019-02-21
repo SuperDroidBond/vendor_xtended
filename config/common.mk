@@ -137,7 +137,9 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGooglePrebuilt \
     ThemePicker \
     Eleven \
-    Jelly 
+    Jelly \
+    Lawnchair
+
     
 # CustomDoze
 PRODUCT_PACKAGES += \
@@ -149,6 +151,11 @@ PRODUCT_PACKAGES += \
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/xtended/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/xtended/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
 # Cutout control overlays
 PRODUCT_PACKAGES += \
