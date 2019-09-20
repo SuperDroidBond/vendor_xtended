@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
     GalleryGoPrebuilt \
     GboardGoPreb \
     OmniJaws \
+    WeatherIcons \
     PixelThemes \
     SettingsIntelligenceGooglePrebuilt \
     ThemePicker \
