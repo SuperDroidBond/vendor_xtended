@@ -9,7 +9,7 @@ type Product_variables struct {
 	Bootloader_message_offset struct {
 		Cflags []string
 	}
-	Should_skip_waiting_for_qsee struct {
+	Should_wait_for_qsee struct {
 		Cflags []string
 	}
 	Device_support_hwfde struct {
@@ -91,7 +91,7 @@ type ProductVariables struct {
 	Uses_media_extensions   *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
-	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
+	Should_wait_for_qsee  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Target_init_vendor_lib  *string `json:",omitempty"`
 	Target_shim_libs  *string `json:",omitempty"`
