@@ -29,7 +29,6 @@ on post-fs-data
     chmod 0640 /dev/fscklogs/log
 
 on boot
-    start sysinit
 
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
@@ -63,12 +62,6 @@ on boot
 
     # Persistent properties (only created if persist exists)
     mkdir /persist/properties 0770 system system
-
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled
 
 # adb over network
 on property:service.adb.tcp.port=5555
