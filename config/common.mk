@@ -13,11 +13,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-ifneq ($(TARGET_BUILD_VARIANT),user)
-# Thank you, please drive thru!
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
-endif
-
 # Default ringtone/notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.ringtone=Despacito.ogg,PerfectStrangers.ogg \
