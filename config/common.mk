@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
     GBoardPrebuilt \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
+    WallpapersStubPrebuilt \
     OmniJaws \
     OmniStyle \
     Lawnchair \
