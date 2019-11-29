@@ -62,16 +62,6 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
 
-# Long screenshot
-#PRODUCT_PACKAGES += \
-    Longshot
-
-PRODUCT_PACKAGES += \
-    ThemePicker \
-    Trebuchet \
-    Eleven \
-    Jelly 
-
 # Backup Tool
 ifneq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
@@ -125,10 +115,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/xtended/prebuilt/common/etc/permissions/privapp-permissions-xtended.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-xtended.xml
 
-# Fix Dialer
-PRODUCT_COPY_FILES +=  \
-#    vendor/xtended/prebuilt/common/sysconfig/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml
-
 # Gzosp-specific startup services
 PRODUCT_COPY_FILES += \
     vendor/xtended/prebuilt/common/etc/init.d/00banner:$(TARGET_COPY_OUT_SYSTEM)/etc/init.d/00banner \
@@ -137,17 +123,28 @@ PRODUCT_COPY_FILES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
+    BluetoothExt \
     CellBroadcastReceiver \
-    GboardGoPreb \
     Development \
     SpareParts
-
-# Optional packages
+   
+# XTENDED PACKAGES
 PRODUCT_PACKAGES += \
-    Basic \
-    LiveWallpapersPicker \
-    PhaseBeam
+    ExactCalculator \
+    GalleryGoPrebuilt \
+    GboardGoPreb \
+    OmniJaws \
+    PixelThemes \
+    SettingsIntelligenceGooglePrebuilt \
+    ThemePicker \
+    Eleven \
+    Jelly 
+    
+# CustomDoze
+PRODUCT_PACKAGES += \
+    CustomDoze
 
+#ADB_ROOT
 PRODUCT_PACKAGES += \
     adb_root
 
@@ -156,25 +153,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
 
-#PRODUCT_PACKAGES += \
-    Recorder
-
-# MsmPapers
-PRODUCT_PACKAGES += \
-    MsmPapers \
-    ExactCalculator \
-    GalleryGoPrebuilt \
-    SettingsIntelligenceGooglePrebuilt
-
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
-
-# Extra Optional packages
-PRODUCT_PACKAGES += \
-    Calculator \
-    BluetoothExt \
-    OmniJaws \
-    PixelThemes
 
 # Cutout control overlays
 PRODUCT_PACKAGES += \
@@ -196,10 +176,6 @@ PRODUCT_PACKAGES += \
     AccentColorMintOverlay \
     AccentColorXtendedOverlay \
     AccentColorGradientIndianOverlay
-
-# CustomDoze
-PRODUCT_PACKAGES += \
-    CustomDoze
 
 # Build OTA for Official Only
 #PRODUCT_PACKAGES += XOta
