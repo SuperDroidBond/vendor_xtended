@@ -177,40 +177,39 @@ PRODUCT_PACKAGES += \
 # Build OTA for Official Only
 #PRODUCT_PACKAGES += XOta
 
-# Extra tools
+# Filesystems tools
 PRODUCT_PACKAGES += \
-    openvpn \
-    e2fsck \
-    mke2fs \
-    tune2fs \
     fsck.exfat \
-    mkfs.exfat \
-    ntfsfix \
-    ntfs-3g \
-    mkfs.ntfs \
     fsck.ntfs \
-    mount.ntfs \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs \
-    libsepol \
-    nano \
-    htop \
-    pigz \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
+
+# Extra tools in Xtended
+PRODUCT_PACKAGES += \
     7z \
-    lib7z \
+    awk \
     bash \
     bzip2 \
     curl \
     getcap \
+    htop \
+    lib7z \
+    libsepol \
+    nano \
+    pigz \
     powertop \
-    procmem \
     setcap \
     unrar \
     unzip \
     vim \
     wget \
-    zip 
+    zip
+
+# These packages are excluded from user builds
+PRODUCT_PACKAGES_DEBUG += \
+    procmem 
 
 # Xtended Stuff - Copy to System fonts
 PRODUCT_COPY_FILES += \
