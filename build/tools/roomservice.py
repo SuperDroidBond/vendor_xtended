@@ -40,7 +40,7 @@ except ImportError:
     urllib.parse = urlparse
     urllib.request = urllib2
 
-DEBUG = False
+DEBUG = True
 default_manifest = ".repo/manifests/xtended_default.xml"
 custom_local_manifest = ".repo/local_manifests/xtended_manifest.xml"
 custom_default_revision = "xq"
