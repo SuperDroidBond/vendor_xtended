@@ -231,10 +231,6 @@ PRODUCT_COPY_FILES += \
     vendor/xtended/prebuilt/fonts/SonySketch/SonySketch.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/SonySketch.ttf \
     vendor/xtended/prebuilt/fonts/Surfer/Surfer.ttf:$(TARGET_COPY_OUT_SYSTEM)/fonts/Surfer.ttf
 
-# DU Font Engine
-#PRODUCT_PACKAGES += \
-   DU-Fonts
-
 # Thermal Control Engine
 #PRODUCT_PACKAGES += \
    ThermalController
